@@ -1,0 +1,9 @@
+{
+  "name": "onchain-arb",
+  "version": "0.1.0",
+  "description": "CEX-DEX and cross-chain arbitrage opportunity detector powered by onchainOS data",
+  "author": {
+    "name": "umi"
+  },
+  "keywords": ["arbitrage", "onchain", "dex", "cex", "onchainOS"]
+}

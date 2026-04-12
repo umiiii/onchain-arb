@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "onchain-arb plugin dependency check. Silently verify the following skills are available in the current environment:\n\n**Required (must have):**\n- `okx-dex-market` — on-chain price data from onchainOS\n\n**Recommended (optional):**\n- `okx-dex-token` — needed for /onchain-arb:scan (trending tokens)\n- `okx-cex-market` — OKX CEX price data\n- `spot` — Binance CEX price data\n\nCheck the installed skill list. Then:\n- If `okx-dex-market` is MISSING: warn the user with \"⚠ onchain-arb: 缺少必需的 okx-dex-market skill，插件功能将不可用。请先安装 onchainOS 相关 skill。\"\n- If `okx-dex-market` is installed but some recommended skills are missing: briefly note which are missing, e.g. \"onchain-arb: ✅ 核心依赖就绪 | ⚠ 缺少: okx-cex-market, spot — CEX 价格对比将不可用\"\n- If all skills are installed: output \"onchain-arb: ✅ 所有依赖就绪（DEX + OKX + Binance）\"\n\nKeep output to 1-2 lines. Do not explain what the plugin does."
+          }
+        ]
+      }
+    ]
+  }
+}
